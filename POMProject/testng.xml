@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+
+<suite name="TestAll"  parallel= "tests"  verbose="3" thread-count="2"  >
+
+ 
+	
+	
+	
+	<test name="TestA"> 
+
+
+             <parameter name="sum" value="30"/> 
+
+	<groups>
+    <run>
+      <include name="B"/>
+     
+    </run>
+  </groups>
+
+
+
+	  <classes>
+			
+	         <class name="testngbasics.Testng_Basic"/>
+	          <class name="testngbasics.Testng_Medium"/>
+	        
+	  </classes>
+
+
+
+
+
+	</test>
+	
+	
+	
+	
+
+	
+	</suite>

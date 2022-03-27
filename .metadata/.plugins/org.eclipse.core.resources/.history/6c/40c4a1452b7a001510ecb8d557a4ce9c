@@ -1,0 +1,79 @@
+package excel;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Date;
+
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.WebDriver;
+
+public class Append_Cls {
+
+	public static void main(String[] args) throws InvalidFormatException, IOException {
+	          
+		//String s=timestamp();
+		//System.out.println(s);
+		
+		String[]  ar={"LeadCreate","Sales","name","Pass"} ;
+		finalreport(ar);
+		      
+	}
+	
+	
+	public static void appendm(String[] appendar) throws InvalidFormatException, IOException{
+		FileInputStream fis= new FileInputStream(ExcelWrite.reportfilepath);
+	      Workbook wbook       =WorkbookFactory.create(fis);
+	  int    rcnt= wbook.getSheet("reportsheet").getLastRowNum();
+	  rcnt=rcnt+1;
+	Row rowobj=  wbook.getSheet("reportsheet").createRow(rcnt);
+	int l=  appendar.length;
+	for (int i=0;i<l;i++){
+	Cell cellobj=	rowobj.createCell(i);
+	cellobj.setCellValue(appendar[i]);
+		
+	}
+	
+	FileOutputStream fos= new FileOutputStream(ExcelWrite.reportfilepath)  ;   
+	wbook.write(fos);
+	  
+	}
+	
+	public static void finalreport(String[] apar ) throws IOException, InvalidFormatException{
+		
+		File fileobj=new File(ExcelWrite.reportfilepath);
+		if (fileobj.exists()==false){
+			String[] ar={"TCname","Modulename","Elementname","Status","Snapshot"};
+			ExcelWrite.createreportsheet(ar);
+			
+		}
+		
+		appendm(apar);
+		
+		
+		
+		
+		
+	}
+	
+public static String timestamp(){
+	String str=DateFormat.getDateTimeInstance().format(new Date());
+	str=str.replaceAll(":", "_");
+	return str;
+		
+	}
+public static void snapshot(WebDriver d,String fname){
+	
+}
+	
+	
+	
+
+}

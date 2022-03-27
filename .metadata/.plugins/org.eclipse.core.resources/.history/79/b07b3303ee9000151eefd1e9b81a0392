@@ -1,0 +1,33 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+
+<suite name="TestAll"  parallel= "tests"  verbose="3" thread-count="2"  >
+
+ 
+	
+	
+	
+	<test name="TestA"> 
+            <parameter name="browser" value="IE"/>
+	  <classes>
+			
+	         <class name="com.wvs.framework.test.automation.marketing.Lead_Test"/>
+	         
+	  </classes>
+
+	</test>
+	
+	
+	<test name="TestB"> 
+            <parameter name="browser" value="CH"/>
+	  <classes>
+			
+	         <class name="com.wvs.framework.test.automation.marketing.Lead_Test"/>
+	         
+	  </classes>
+
+	</test>
+	
+
+	
+	</suite>

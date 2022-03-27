@@ -1,0 +1,17 @@
+package testngbasics;
+
+import org.testng.annotations.Test;
+
+public class Testng_Medium {
+
+	
+	
+	@Test
+	public static void mehtodnamemedium(){
+		System.out.println("mehtodnamemedium");
+	}
+	
+	
+	
+	
+}

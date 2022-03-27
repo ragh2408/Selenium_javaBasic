@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestAll" duration-ms="61" started-at="2015-11-21T08:39:53Z" finished-at="2015-11-21T08:39:53Z">
+    <groups>
+      <group name="B">
+        <method signature="Testng_Basic.amehtodname()[pri:0, instance:testngbasics.Testng_Basic@39378e61]" name="amehtodname" class="testngbasics.Testng_Basic"/>
+        <method signature="Testng_Medium.mehtodnamemedium(java.lang.String)[pri:0, instance:testngbasics.Testng_Medium@4d4acd0b]" name="mehtodnamemedium" class="testngbasics.Testng_Medium"/>
+      </group> <!-- B -->
+    </groups>
+    <test name="TestA" duration-ms="61" started-at="2015-11-21T08:39:53Z" finished-at="2015-11-21T08:39:53Z">
+      <class name="testngbasics.Testng_Medium">
+        <test-method status="PASS" signature="mehtodnamemedium(java.lang.String)[pri:0, instance:testngbasics.Testng_Medium@4d4acd0b]" name="mehtodnamemedium" duration-ms="1" started-at="2015-11-21T14:09:53Z" finished-at="2015-11-21T14:09:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[30]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mehtodnamemedium -->
+      </class> <!-- testngbasics.Testng_Medium -->
+      <class name="testngbasics.Testng_Basic">
+        <test-method status="PASS" signature="amehtodname()[pri:0, instance:testngbasics.Testng_Basic@39378e61]" name="amehtodname" duration-ms="28" started-at="2015-11-21T14:09:53Z" finished-at="2015-11-21T14:09:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amehtodname -->
+      </class> <!-- testngbasics.Testng_Basic -->
+    </test> <!-- TestA -->
+  </suite> <!-- TestAll -->
+</testng-results>

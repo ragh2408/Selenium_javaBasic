@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="testngbasics.Testng_Basic">
+        <methods>
+          <include name="bdforemehtod1"/>
+          <include name="BeforeClass"/>
+          <include name="AfterMethod"/>
+          <include name="mehtodname2"/>
+          <include name="mehtodname1"/>
+          <include name="AfterClass"/>
+        </methods>
+      </class> <!-- testngbasics.Testng_Basic -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
